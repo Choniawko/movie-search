@@ -2,6 +2,11 @@
   "name": "movie-search",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --content-base src/",
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack"
+  },
   "author": "choniawko <pawel.choniawko@gmail.com>",
   "license": "MIT",
   "devDependencies": {
