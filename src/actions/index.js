@@ -1,6 +1,6 @@
 import { getMovies } from '../common/APIService'
 
-const setList = (movies) => ({
+export const setList = (movies) => ({
   type: 'SET_LIST',
   payload: movies
 })
