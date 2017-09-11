@@ -1,8 +1,11 @@
-const template = `<div>MovieDB search</div>`
-
 class Header extends window.HTMLElement {
-  createdCallback () {
-    this.createShadowRoot().innerHTML = template
+  constructor () {
+    super()
+    this.shadow = this.createShadowRoot()
+  }
+  connectedCallback () {
+    const template = `<div>MovieDB search</div>`
+    this.shadow.innerHTML = template
   }
 }
 export default Header

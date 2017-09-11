@@ -1,6 +1,4 @@
 import App from './components/App'
-import { store } from './store'
-import { movieListTemplate } from './components/MovieList'
 import { authenticate } from './common/APIService'
 import registerComponents from './registerComponents'
 
@@ -15,7 +13,3 @@ const render = () => {
   rootEl.innerHTML = App()
 }
 render()
-
-store.subscribe(() => {
-  document.querySelector('#list').innerHTML = movieListTemplate()
-})
