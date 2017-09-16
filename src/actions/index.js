@@ -9,8 +9,9 @@ export const getData = (term) => {
   return (dispatch) => {
     return term
       ? getMovies(term)
-        .then((res) => {
-          dispatch(setList(res.results))
-        }) : null
+          .then((res) => {
+            dispatch(setList(res.results))
+          })
+      : null
   }
 }

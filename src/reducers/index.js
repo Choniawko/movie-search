@@ -1,10 +1,11 @@
+import * as consts from './consts'
+
 const initialState = []
+
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_LIST':
-      return [
-        ...action.payload
-      ]
+    case consts.SET_LIST:
+      return [ ...action.payload ]
     default:
       return state
   }
